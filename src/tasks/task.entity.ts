@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Tasks {
+export class Task {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -11,6 +11,6 @@ export class Tasks {
   @Column()
   description: string;
 
-  @Column()
-  isFinished: boolean;
+  @Column({ default: false })
+  isDone: boolean;
 }
